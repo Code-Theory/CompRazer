@@ -1,0 +1,19 @@
+{
+  "manifest_version": 3,
+  "name": "compRazor",
+  "version": "1.0.0",
+  "description": "File compression Chrome extension for text, image, audio, and video files.",
+  "action": {
+    "default_popup": "popup.html",
+    "default_icon": {
+      "16": "assets/icon16.png",
+      "48": "assets/icon48.png",
+      "128": "assets/icon128.png"
+    }
+  },
+  "icons": {
+    "16": "assets/icon16.png",
+    "48": "assets/icon48.png",
+    "128": "assets/icon128.png"
+  }
+}

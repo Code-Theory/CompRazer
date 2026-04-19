@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>compRazor</title>
+  <link rel="stylesheet" href="popup.css">
+</head>
+<body>
+  <div class="container">
+    <!-- Header -->
+    <header class="header">
+      <h1 class="title">compRazor</h1>
+      <p class="subtitle">File Compression Extension</p>
+    </header>
+
+    <!-- File Upload Section -->
+    <section class="section upload-section">
+      <label class="file-label" for="fileInput">
+        <span class="file-label-text">Choose File</span>
+        <input type="file" id="fileInput" accept=".txt,.csv,.png,.jpg,.jpeg,.mp3,.wav,.mp4" hidden>
+      </label>
+      <div id="fileInfo" class="file-info hidden">
+        <span id="fileName" class="file-name"></span>
+        <span id="fileSize" class="file-size"></span>
+      </div>
+      <div id="fileType" class="file-type hidden">
+        <span id="detectedType"></span>
+        <span id="algorithm"></span>
+      </div>
+      <button id="compressBtn" class="btn btn-primary hidden" disabled>Compress</button>
+      <div id="progressBar" class="progress hidden">
+        <div id="progressFill" class="progress-fill"></div>
+      </div>
+    </section>
+
+    <!-- Compression Results Section -->
+    <section id="resultsSection" class="section hidden">
+      <h2 class="section-title">Compression Results</h2>
+      <div class="metrics-grid">
+        <div class="metric">
+          <span class="metric-label">Original Size</span>
+          <span id="originalSize" class="metric-value"></span>
+        </div>
+        <div class="metric">
+          <span class="metric-label">Compressed Size</span>
+          <span id="compressedSize" class="metric-value"></span>
+        </div>
+        <div class="metric">
+          <span class="metric-label">Compression Ratio</span>
+          <span id="compressionRatio" class="metric-value"></span>
+        </div>
+        <div class="metric">
+          <span class="metric-label">Space Savings</span>
+          <span id="spaceSavings" class="metric-value"></span>
+        </div>
+      </div>
+      <button id="downloadCompressed" class="btn btn-success">Download Compressed File</button>
+      <button id="downloadResidual" class="btn btn-success hidden">Download Residual File</button>
+    </section>
+
+    <!-- Rebuild Verification Section -->
+    <section id="rebuildSection" class="section hidden">
+      <h2 class="section-title">Rebuild Verification</h2>
+      <label class="file-label file-label-secondary" for="decompressInput">
+        <span class="file-label-text">Upload Compressed + Residual File(s)</span>
+        <input type="file" id="decompressInput" multiple hidden>
+      </label>
+      <div id="verificationResult" class="verification hidden"></div>
+      <button id="downloadDecompressed" class="btn btn-success hidden">Download Decompressed File</button>
+    </section>
+
+    <!-- Error Message -->
+    <div id="errorMessage" class="error hidden"></div>
+  </div>
+
+  <!-- Libraries -->
+  <script src="lib/pako.min.js"></script>
+  <script src="lib/fflate.min.js"></script>
+  <script src="lib/upng.js"></script>
+  <script src="lib/jpeg-encoder.js"></script>
+  <script src="lib/jpeg-decoder.js"></script>
+  <!-- jpeg.js index not loaded (uses require); encoder/decoder register on window['jpeg-js'] -->
+  <script src="lib/lamejs.min.js"></script>
+
+  <!-- Utilities -->
+  <script src="utils/file-utils.js"></script>
+  <script src="utils/hash.js"></script>
+  <script src="utils/metrics.js"></script>
+  <script src="utils/residual.js"></script>
+
+  <!-- Compressors -->
+  <script src="compressors/text-compressor.js"></script>
+  <script src="compressors/image-compressor.js"></script>
+  <script src="compressors/audio-compressor.js"></script>
+  <script src="compressors/video-compressor.js"></script>
+
+  <!-- Main UI Logic -->
+  <script src="popup.js"></script>
+</body>
+</html>

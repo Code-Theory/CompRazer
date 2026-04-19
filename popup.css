@@ -1,0 +1,255 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  width: 400px;
+  min-height: 300px;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-size: 13px;
+  color: #1a1a2e;
+  background: #f8f9fc;
+}
+
+.container {
+  padding: 16px;
+}
+
+/* Header */
+.header {
+  text-align: center;
+  padding-bottom: 12px;
+  border-bottom: 2px solid #e0e4ef;
+  margin-bottom: 14px;
+}
+
+.title {
+  font-size: 20px;
+  font-weight: 700;
+  color: #2962ff;
+  letter-spacing: -0.5px;
+}
+
+.subtitle {
+  font-size: 11px;
+  color: #6b7294;
+  margin-top: 2px;
+}
+
+/* Sections */
+.section {
+  margin-bottom: 14px;
+  padding: 12px;
+  background: #fff;
+  border-radius: 8px;
+  border: 1px solid #e0e4ef;
+}
+
+.section-title {
+  font-size: 12px;
+  font-weight: 600;
+  color: #2962ff;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  margin-bottom: 10px;
+}
+
+/* File Upload */
+.file-label {
+  display: block;
+  text-align: center;
+  padding: 10px 16px;
+  background: #2962ff;
+  color: #fff;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: 600;
+  font-size: 13px;
+  transition: background 0.2s;
+}
+
+.file-label:hover {
+  background: #1c4fd6;
+}
+
+.file-label-secondary {
+  background: #5c6bc0;
+}
+
+.file-label-secondary:hover {
+  background: #4a5ab5;
+}
+
+.file-info {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 8px;
+  padding: 6px 10px;
+  background: #f0f2f8;
+  border-radius: 4px;
+}
+
+.file-name {
+  font-weight: 500;
+  color: #1a1a2e;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  max-width: 240px;
+}
+
+.file-size {
+  font-size: 12px;
+  color: #6b7294;
+  white-space: nowrap;
+}
+
+.file-type {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 6px;
+  font-size: 12px;
+  color: #6b7294;
+}
+
+/* Buttons */
+.btn {
+  display: block;
+  width: 100%;
+  padding: 10px;
+  border: none;
+  border-radius: 6px;
+  font-size: 13px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.2s, opacity 0.2s;
+  margin-top: 10px;
+}
+
+.btn:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.btn-primary {
+  background: #2962ff;
+  color: #fff;
+}
+
+.btn-primary:hover:not(:disabled) {
+  background: #1c4fd6;
+}
+
+.btn-success {
+  background: #00c853;
+  color: #fff;
+}
+
+.btn-success:hover {
+  background: #00a844;
+}
+
+/* Progress Bar */
+.progress {
+  height: 4px;
+  background: #e0e4ef;
+  border-radius: 2px;
+  margin-top: 8px;
+  overflow: hidden;
+}
+
+.progress-fill {
+  height: 100%;
+  background: #2962ff;
+  border-radius: 2px;
+  width: 0%;
+  transition: width 0.3s;
+}
+
+.progress-fill.indeterminate {
+  width: 30%;
+  animation: indeterminate 1.5s infinite;
+}
+
+@keyframes indeterminate {
+  0% { transform: translateX(-100%); }
+  100% { transform: translateX(400%); }
+}
+
+/* Metrics Grid */
+.metrics-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 8px;
+  margin-bottom: 10px;
+}
+
+.metric {
+  padding: 8px;
+  background: #f0f2f8;
+  border-radius: 4px;
+  text-align: center;
+}
+
+.metric-label {
+  display: block;
+  font-size: 10px;
+  color: #6b7294;
+  text-transform: uppercase;
+  letter-spacing: 0.3px;
+  margin-bottom: 2px;
+}
+
+.metric-value {
+  display: block;
+  font-size: 14px;
+  font-weight: 700;
+  color: #1a1a2e;
+}
+
+/* Verification */
+.verification {
+  margin-top: 10px;
+  padding: 10px;
+  border-radius: 6px;
+  font-weight: 600;
+  text-align: center;
+}
+
+.verification.success {
+  background: #e8f5e9;
+  color: #2e7d32;
+  border: 1px solid #a5d6a7;
+}
+
+.verification.warning {
+  background: #fff3e0;
+  color: #e65100;
+  border: 1px solid #ffcc80;
+}
+
+.verification.info {
+  background: #e3f2fd;
+  color: #1565c0;
+  border: 1px solid #90caf9;
+}
+
+/* Error */
+.error {
+  margin-top: 10px;
+  padding: 10px;
+  background: #ffebee;
+  color: #c62828;
+  border: 1px solid #ef9a9a;
+  border-radius: 6px;
+  font-size: 12px;
+  text-align: center;
+}
+
+/* Utility */
+.hidden {
+  display: none !important;
+}

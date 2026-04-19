@@ -1,0 +1,9 @@
+File compression is the process of reducing the size of one or more files so that they occupy less storage space and can be transferred more quickly over a network. In an era of rapidly growing data, from high-resolution images and 4K videos to massive datasets and software packages, compression has become a fundamental necessity in computing and digital communication.
+
+At its core, compression works by identifying and eliminating redundancy in data. Every file, whether it is a text document, an image, a video, or an audio recording, contains patterns, repetitions, or statistically predictable sequences. Compression algorithms exploit these properties to represent the same information in a more compact form.
+
+The field of data compression sits at the intersection of information theory, mathematics, and computer science. It has practical relevance everywhere: web browsers decompress pages on-the-fly, operating systems compress files in storage, streaming platforms compress audio and video in real time, and smartphones compress photos before uploading them to the cloud.
+
+Lossless compression reduces file size without discarding any data. When a losslessly compressed file is decompressed, the result is a bit-for-bit identical copy of the original. This is essential for files where accuracy is critical, such as text documents, executable programs, spreadsheets, and source code. Common examples of lossless compression include ZIP archives, PNG images, FLAC audio, and GIF images.
+
+Lossy compression achieves much higher compression ratios by permanently discarding information that is considered less important or less perceptible to the human eye or ear. Once a file is compressed using a lossy method, the discarded information cannot be recovered. Common examples include JPEG images, MP3 audio, and MP4 video. These are the dominant formats for photos, music, and video streaming globally.
