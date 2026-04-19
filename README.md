@@ -224,9 +224,9 @@ Ensuring compressed data can be faithfully reconstructed is a core feature of co
 
 | Name | Contribution |
 |------|-------------|
-| Daksh | 16.66% |
+| Ashish | 16.66% |
 | Ayush | 16.66% |
-| Tanishq | 16.66% |
+| Daksh | 16.66% |
 | Hussain | 16.66% |
 | Talha | 16.66% |
-| Ashish | 16.66% |
+| Tanishq | 16.66% |
